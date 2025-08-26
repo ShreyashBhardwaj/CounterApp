@@ -21,11 +21,12 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="244dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="184dp"
-        android:layout_marginTop="276dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="280dp"
         android:text="0"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="72sp"
         app:layout_constraintStart_toStartOf="parent"
