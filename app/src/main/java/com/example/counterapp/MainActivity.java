@@ -1,6 +1,9 @@
 package com.example.counterapp;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +12,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    TextView welcome_text, count_text;
+    Button count;
+
+    int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +28,24 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        welcome_text = findViewById(R.id.welcome);
+        count_text = findViewById(R.id.textView);
+        count = findViewById(R.id.count);
+
+        count.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count_text.setText(""+increaseCounter());
+            }
+        });
+
+
     }
+
+
+    public int increaseCounter(){
+       return ++counter;
+    }
+
 }
